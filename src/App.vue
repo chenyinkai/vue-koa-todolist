@@ -6,11 +6,18 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: 'App',
   data () {
     return {
     }
+  },
+  mounted () {
+    axios.get(process.env.API_HOST + '/userData')
+      .then(data => {
+        console.log(data)
+      })
   },
   components: {}
 }
