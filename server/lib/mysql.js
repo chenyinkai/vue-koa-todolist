@@ -74,10 +74,18 @@ let insert = function (name, pass) {
   return query(_sql)
 }
 
-// 查询用户任务
+// 查询用户任务总数
 let findUserTask = function (name) {
   let _sql = `
         SELECT * FROM task WHERE name='${name}'
+    `
+  return query(_sql)
+}
+
+// 分页查询用户任务
+let findUserTaskLimit = function (name, index, num) {
+  let _sql = `
+        SELECT * FROM task WHERE name='${name}' LIMIT ${index},${num}
     `
   return query(_sql)
 }
@@ -95,5 +103,6 @@ module.exports = {
   insert,
   findName,
   findUserTask,
-  taskInsert
+  taskInsert,
+  findUserTaskLimit
 }

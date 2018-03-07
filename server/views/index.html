@@ -58,7 +58,17 @@
       });
 
     document.querySelector('.login').onclick = () => {
-      window.location.href = 'login.html'
+      // window.location.href = 'login.html'
+      axios.get('/getTask', {
+        params:{
+          name: 'aa',
+          pageSize: 10,
+          pageNum: 1
+        }
+      })
+        .then(res => {
+          console.log(res)
+        })
     }
 
     document.querySelector('.register').onclick = () => {
