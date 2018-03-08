@@ -6,7 +6,6 @@
 </template>
 
 <script>
-import axios from 'axios'
 export default {
   name: 'App',
   data () {
@@ -14,7 +13,7 @@ export default {
     }
   },
   mounted () {
-    axios.get(process.env.API_HOST + '/userData')
+    this.$http.get(process.env.API_HOST + '/userData')
       .then(data => {
         console.log(data)
       })
@@ -23,13 +22,12 @@ export default {
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="stylus" scoped>
+#app
+  font-family 'Avenir', Helvetica, Arial, sans-serif
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+  text-align center
+  color #2c3e50
+  margin-top 60px
 </style>
