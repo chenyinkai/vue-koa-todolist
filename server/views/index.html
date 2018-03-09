@@ -43,7 +43,7 @@
   </ul>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script>
-    axios.get('/userData')
+    axios.get('/api/userData')
       .then(function (response) {
         console.log(response);
         document.querySelector('.register-num > span').innerText = response.data.total
@@ -59,7 +59,7 @@
 
     document.querySelector('.login').onclick = () => {
       // window.location.href = 'login.html'
-      axios.get('/getTask', {
+      axios.get('/api/getTask', {
         params:{
           name: 'aa',
           pageSize: 10,

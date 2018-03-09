@@ -37,7 +37,7 @@
       let passwordConfirm = document.querySelector('.password-confirm').value
       if (name && password) {
         if (password === passwordConfirm) {
-          axios.post('/register', {
+          axios.post('/api/register', {
             name: name,
             pass: password
           })

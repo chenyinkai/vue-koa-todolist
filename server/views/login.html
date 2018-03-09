@@ -31,7 +31,7 @@
       let name = document.querySelector('.name').value
       let password = document.querySelector('.password').value
       if (name && password) {
-        axios.post('/login', {
+        axios.post('/api/login', {
             name: name,
             pass: password
           })

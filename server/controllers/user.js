@@ -51,7 +51,6 @@ const register = async ctx => {
 
 // 登陆
 const login = async ctx => {
-  console.log('/login')
   await userModel.findName(ctx.request.body.name).then(result => {
     if (result.length) {
       if (md5(ctx.request.body.pass) === result[0].pass) {

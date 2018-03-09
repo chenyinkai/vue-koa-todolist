@@ -8,12 +8,12 @@ router.get('/', async (ctx) => {
 })
 
 // 登陆注册相关
-router.get('/userData', userApi.getUserData)
-router.post('/register', userApi.register)
-router.post('/login', userApi.login)
+router.get('/api/userData', userApi.getUserData)
+router.post('/api/register', userApi.register)
+router.post('/api/login', userApi.login)
 
 // task
-router.get('/getTask', taskApi.getTask)
-router.post('/task', taskApi.task)
+router.get('/api/getTask', taskApi.getTask)
+router.post('/api/task', taskApi.task)
 
 module.exports = router
