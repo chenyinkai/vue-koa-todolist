@@ -37,7 +37,7 @@ export default {
     loginToDo () {
       if (this.name && this.password) {
         this.$http
-          .post(process.env.API_HOST + '/login', {
+          .post(process.env.API_HOST + '/api/login', {
             name: this.name,
             pass: this.password
           })

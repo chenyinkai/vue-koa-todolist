@@ -13,7 +13,7 @@ export default {
     }
   },
   mounted () {
-    this.$http.get(process.env.API_HOST + '/userData')
+    this.$http.get(process.env.API_HOST + '/api/userData')
       .then(data => {
         console.log(data)
       })
