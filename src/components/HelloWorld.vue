@@ -1,12 +1,15 @@
 <template>
   <div class="hello">
     <el-row>
-      <el-col :xs="24" :sm="{span:6}">
+      <el-col :xs="24" :sm="{span:12,offset:6}">
         <router-link to="/login">
           <el-button type="primary" round>登录</el-button>
         </router-link>
         <router-link to="/register">
           <el-button type="primary" round>注册</el-button>
+        </router-link>
+        <router-link to="/task">
+          <el-button type="primary" round>任务</el-button>
         </router-link>
       </el-col>
     </el-row>

@@ -7,7 +7,14 @@ import Element from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import axios from 'axios'
 
-Vue.prototype.$http = axios
+const host =
+  process.env.NODE_ENV === 'development'
+    ? 'http://localhost:3000'
+    : 'http://localhost:3000' // 根据 process.env.NODE_ENV 的值判断当前是什么环境
+const instance = axios.create({
+  baseURL: host
+})
+Vue.prototype.$http = instance
 Vue.config.productionTip = false
 Vue.use(Element)
 /* eslint-disable no-new */
